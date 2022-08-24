@@ -38,7 +38,7 @@ def traverse(lines, idx, record, academic_year, semester)
     record[academic_year] = {} if record[academic_year].nil?
     record[academic_year][semester] = []
 
-    idx += 1 # skip line after ACADEMIC RECORD: line
+    idx += 1 # skip line after ACADEMIC YEAR line
   else
     record[academic_year][semester] << get_course(line)
   end
