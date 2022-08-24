@@ -9,3 +9,7 @@ gem 'rspec', '~> 3.11'
 gem 'pdf-reader', '~> 2.10'
 
 gem 'ruby-lsp', '~> 0.2.3', group: :development
+
+gem 'rake'
+
+gem 'rubocop'
