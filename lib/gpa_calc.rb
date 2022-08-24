@@ -31,12 +31,13 @@ def traverse(lines, idx, record, academic_year, semester)
 
   line = lines[idx].split(/\s{2,}/)
 
-  case line.first
-  when 'ACADEMIC YEAR:'
+  if line.first.start_with?('ACADEMIC YEAR')
     academic_year = line[1]
     semester = line[2].eql?('FIRST SEMESTER') ? :first : :second
+
     record[academic_year] = {} if record[academic_year].nil?
     record[academic_year][semester] = []
+
     idx += 1 # skip line after ACADEMIC RECORD: line
   else
     record[academic_year][semester] << get_course(line)
