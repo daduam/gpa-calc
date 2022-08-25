@@ -10,9 +10,9 @@ reader.pages.each do |page|
   page.text.split("\n").each { |line| lines << line unless line.empty? }
 end
 
-# title = lines[0]
-# student = lines[1..2]
-# date_printed = lines[3]
+# title_line = lines[0]
+# student_lines = lines[1..2]
+# date_printed_line = lines[3]
 lines = lines[4..]
 
 def get_course(line)

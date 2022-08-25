@@ -3,9 +3,14 @@ GEM
   specs:
     Ascii85 (1.1.0)
     afm (0.2.2)
+    ast (2.4.2)
     diff-lcs (1.5.0)
     hashery (2.1.2)
+    json (2.6.2)
     language_server-protocol (3.16.0.3)
+    parallel (1.22.1)
+    parser (3.1.2.1)
+      ast (~> 2.4.1)
     pdf-reader (2.10.0)
       Ascii85 (~> 1.0)
       afm (~> 0.2.1)
@@ -13,6 +18,10 @@ GEM
       ruby-rc4
       ttfunk
     prettier_print (0.1.0)
+    rainbow (3.1.1)
+    rake (13.0.6)
+    regexp_parser (2.5.0)
+    rexml (3.2.5)
     rspec (3.11.0)
       rspec-core (~> 3.11.0)
       rspec-expectations (~> 3.11.0)
@@ -26,22 +35,38 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.11.0)
     rspec-support (3.11.0)
+    rubocop (1.35.1)
+      json (~> 2.3)
+      parallel (~> 1.10)
+      parser (>= 3.1.2.1)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.8, < 3.0)
+      rexml (>= 3.2.5, < 4.0)
+      rubocop-ast (>= 1.20.1, < 2.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 3.0)
+    rubocop-ast (1.21.0)
+      parser (>= 3.1.1.0)
     ruby-lsp (0.2.3)
       language_server-protocol
       sorbet-runtime
       syntax_tree (>= 2.4)
+    ruby-progressbar (1.11.0)
     ruby-rc4 (0.1.5)
-    sorbet-runtime (0.5.10354)
+    sorbet-runtime (0.5.10374)
     syntax_tree (3.4.0)
       prettier_print
     ttfunk (1.7.0)
+    unicode-display_width (2.2.0)
 
 PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
   pdf-reader (~> 2.10)
+  rake
   rspec (~> 3.11)
+  rubocop
   ruby-lsp (~> 0.2.3)
 
 BUNDLED WITH
