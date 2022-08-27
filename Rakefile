@@ -3,7 +3,7 @@ require "rubocop/rake_task"
 task default: %w[lint run]
 
 RuboCop::RakeTask.new(:lint) do |task|
-  task.patterns = ["lib/**/*.rb", "test/**/*.rb"]
+  task.patterns = ["lib/**/*.rb", "spec/**/*.rb"]
   task.fail_on_error = false
 end
 
