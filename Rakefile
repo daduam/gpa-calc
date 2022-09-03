@@ -1,12 +1,6 @@
-require "rubocop/rake_task"
+# Add your own tasks in files placed in lib/tasks ending in .rake,
+# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
-task default: %w[lint run]
+require_relative "config/application"
 
-RuboCop::RakeTask.new(:lint) do |task|
-  task.patterns = ["lib/**/*.rb", "spec/**/*.rb"]
-  task.fail_on_error = false
-end
-
-task :run do
-  ruby "lib/gpa_calc.rb"
-end
+Rails.application.load_tasks
